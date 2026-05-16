@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Pay Fees - GGU</title>
+  <link rel="shortcut icon" href="image/logobrow.png" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fees_style.CSS">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  
+</head>
+<body>
+  <section class="header">
+    <nav>
+        <a href="index.html"><img src="image/logo.png" id="logo-img"></a>
+
+        <div class="nav-links" id="navLinks">
+
+            <span class="icon" onclick="hidemenu()">&#10005;</span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Admission_page.html">Admission</a></li>
+                <li><a href="index.html#course_call">Course</a></li>
+                <li><a href="index.html#about_us">About Us</a></li>
+                <li><a href="faculty_page.html">Faculty</a></li>
+                <li><a href="Contact_page.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div> 
+        <span class="icon" onclick="showmenu()">&#9776;</span>
+    </nav>
+    <h1>PRINCIPAL</h1>
+    <!-- Separate line for the Principal block -->
+    <div class="row">
+        <div class="course-col" >
+            <h2>Dr. Bala Swamy Pachimala</h2>
+            <div class="designation">PRINCIPAL</div>
+            <div class="qualification">Ph.D in other subjects</div>
+            <p>Subject of teaching is English. Having 13 years of experience in teaching field.</p>
+        </div>
+    </div>
+    <h1>TEACHING STAFF</h1>
+    <!-- Row for the rest of the blocks -->
+    <div class="row">
+        <!-- Block 2 -->
+        <div class="course-col">
+            <h2>Dr. Dirisina Augustine</h2>
+            <div class="designation">LECTURER</div>
+            <div class="qualification">Professional degree II</div>
+            <p>Works as lecturer in Education. Having 23 years of experience.</p>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="course-col">
+            <h2>Dr. Vara Solman Raju</h2>
+            <div class="designation">LECTURER</div>
+            <div class="qualification">Professional degree II</div>
+            <p>Lecturer in Physical Education. Having 23 years of experience.</p>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="course-col">
+            <h2>Dr. Boddu Vijaya Prasad</h2>
+            <div class="designation">LECTURER</div>
+            <div class="qualification">Professional degree II</div>
+            <p>Lecturer in Mathematics. Having 8 years of experience.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Block 5 -->
+        <div class="course-col">
+            <h2>Dr. Petla Neeraja</h2>
+            <div class="designation">LECTURER</div>
+            <div class="qualification">Professional degree II</div>
+            <p>Lecturer in English. Having 10 years of experience.</p>
+        </div>
+
+        <!-- Block 6 -->
+        <div class="course-col">
+            <h2>Dr. Sundari Saggurthi</h2>
+            <div class="designation">LECTURER</div>
+            <div class="qualification">Professional degree II</div>
+            <p>Lecturer in Biological Science. Having 14 years of experience.</p>
+        </div>
+
+        <!-- Block 7 -->
+        <div class="course-col">
+            <h2>Dr. Prasad Katam</h2>
+            <div class="designation">LECTURER</div>
+            <div class="qualification">Professional degree II</div>
+            <p>Lecturer in Social Studies. Having 5 years of experience. </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Block 8 -->
+        <div class="course-col">
+            <h2>Dr. Saripalli Anna Rao</h2>
+            <div class="designation">LECTURER</div>
+            <div class="qualification">Professional degree II</div>
+            <p>Lecturer in Telugu. Having 3 years of experience.</p>
+        </div>
+
+        <!-- Block 9 -->
+        <div class="course-col">
+            <h2>Dr. Rajesh Chintada</h2>
+            <div class="designation">LECTURER</div>
+            <div class="qualification">POST GRADUATION</div>
+            <p>Lecturer in Fine Arts. Having 6 years of experience.</p>
+        </div>
+    </div>
+
+
+    <h1>TECHNICAL STAFF</h1> 
+    <div class="row">
+        <div class="course-col">
+            <h2>Merugu Raja</h2>
+            <div class="designation">LIBRARIAN</div>
+        </div>
+    </div>
+
+    <h1>NON-TEACHING STAFF</h1>
+<div class="row">
+    <!-- Block 2 -->
+    <div class="course-col">
+        <h2>Bala Swamy M</h2>
+        
+    </div>
+
+    <!-- Block 3 -->
+    <div class="course-col">
+        <h2>Joji Babu. V</h2>
+    </div>
+
+    <!-- Block 4 -->
+    <div class="course-col">
+        <h2>Ramama ch</h2>
+        
+    </div>
+</div>
+
+<div class="row">
+    <!-- Block 5 -->
+    <div class="course-col">
+        <h2>Merugu Jyothi</h2>
+        
+        
+    </div>
+
+    <!-- Block 6 -->
+    <div class="course-col">
+        <h2>Devanamdham</h2>
+        
+    </div>
+
+    <!-- Block 7 -->
+    <div class="course-col">
+        <h2>Navya. K</h2>
+        
+    </div>
+</div>
+</body>
+<script src="javascript/fees_script.js"></script>
+<script>
+  var navLinks= document.getElementById("navLinks");
+
+function showmenu(){
+    navLinks.style.right="0";
+}   
+function hidemenu(){
+    navLinks.style.right="-200px";
+}
+function sendmail(){
+		Email.send({}).then(
+	message => alert("Thanks you- Team GGU")
+);
+}
+</script>
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script src="javascript/main_script.js"></script>
+</html>

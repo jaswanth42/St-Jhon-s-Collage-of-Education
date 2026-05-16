@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GGU</title>
+    <link rel="shortcut icon" href="image/Logo.png" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="css/contact_style.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="image/logo.png" id="logo-img"></a>
+            
+            <div class="nav-links" id="navLinks">
+
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Admission_page.html">Admission</a></li>
+                    <li><a href="index.html#course_call">Course</a></li>
+                    <li><a href="index.html#about_us">About Us</a></li>
+                    <li><a href="faculty_page.html">Faculty</a></li>
+                    <li><a href="Contact_page.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div> 
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+        <!-- <div class="wrapper">
+		<div class="r_form_wrap">
+			
+			<div class="title">
+				<p>Contact form</p>
+			</div>
+			
+			<div class="r_form">
+				<form method="post" onsubmit="sendmail(); reset(); return false;">
+					<div class="input_wrap">
+						<label for="yourname">Your Name</label>
+						<div class="input_item">
+							<i class="fa fa-user" id="icon"></i>
+							<input type="text" name="your name" class="input" id="yourname" placeholder="Enter the name" required>
+						</div>
+					</div>
+					<div class="input_wrap">
+						<label for="emailaddress">Email Address</label>
+						<div class="input_item">
+							<i class="fa fa-envelope" id="icon"></i>
+							<input type="email" name="email address" class="input" id="emailaddress" placeholder="Enter the Email ID" required>
+						</div>
+					</div>
+
+					<div class="input_wrap">
+						<label for="phone">Phone</label>
+						<div class="input_item">
+							<i class="fa fa-commenting" id="icon"></i>
+                            <textarea name="phone" class="mess" id="phone" placeholder="Write your message..." size="500"></textarea>
+						</div>
+					</div>
+					
+	
+					<input type="submit" class="button" value="Send Message">
+					<div ></div>
+					<input type="reset" class="clear_ad" value="Clear">
+					
+				</form>
+			</div>
+        </div>
+        </div> -->
+        <section class="hero-section">
+			<h1 class="hero-text">Contact Us</h1> <br>
+		</section>
+	
+		<section class="info-section">
+			<p class="college-info">Welcome to our college! We are dedicated to providing an exceptional education and fostering a strong community.</p>
+			<p class="thank-you-message">Thank you for reaching out to us. We are happy to assist you. Please find the relevant contact information below.</p>
+		</section>
+	
+		<!-- <div class="buttons-container">
+			<button onclick="showContent('general')" class="btn">General</button>
+			<button onclick="showContent('office')" class="btn">Office</button>
+			<button onclick="showContent('schools')" class="btn">Schools</button>
+		</div> -->
+	
+		<section id="content-container" class="contact-info"></section>
+	
+	   <!-- Get in Touch Section -->
+	<section class="get-in-touch">
+		<h2>Get in Touch</h2>
+		<div class="form-container">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" id="name" class="form-input" placeholder="Your Name">
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" class="form-input" placeholder="Your Email">
+			</div>
+		</div>
+	
+		<div class="form-container">
+			<div class="form-group">
+				<label for="phone">Phone Number</label>
+				<input type="tel" id="phone" class="form-input" placeholder="Your Phone Number">
+			</div>
+			<div class="form-group">
+				<label for="purpose">Purpose of Help</label>
+				<select id="purpose" class="form-select">
+					<option value="">Select an Option</option>
+					<option value="inquiry">General Inquiry</option>
+					<option value="support">Technical Support</option>
+					<option value="admissions">Admissions</option>
+					<option value="feedback">Feedback</option>
+				</select>
+			</div>
+		</div>
+	
+		<div class="form-group">
+			<label for="description">Description</label>
+			<textarea id="description" class="form-textarea" placeholder="Describe your issue or request"></textarea>
+		</div>
+	
+		<button class="form-submit">Submit</button>
+	</section>
+	
+	
+	
+		<!-- Popup element -->
+		<div class="popup" id="confirmation-popup">
+			<h2>🎉 Success! 🎉</h2>
+			<p>Your form has been submitted successfully. 😊</p>
+			<button class="close-btn" onclick="closePopup()">Close</button>
+		</div>
+	
+		<script>
+			// Function to show the popup
+			function showPopup() {
+				const popup = document.getElementById('confirmation-popup');
+				popup.style.display = 'block';
+			}
+	
+			// Function to close the popup
+			function closePopup() {
+				const popup = document.getElementById('confirmation-popup');
+				popup.style.display = 'none';
+			}
+	
+			// Adding event listener to the submit button
+			document.querySelector('.form-submit').addEventListener('click', function(event) {
+				event.preventDefault(); // Prevents the form from actually submitting for demonstration purposes
+				showPopup(); // Shows the popup when the submit button is clicked
+			});
+	
+			// Define the contact information for each section
+			const contactData = {
+				general: [
+					{
+						department: "Admissions",
+						phone: "+1 123 456 7890",
+						address: "123 College Ave, City, State",
+						email: "admissions@college.edu"
+					},
+					{
+						department: "Student Services",
+						phone: "+1 234 567 8901",
+						address: "123 College Ave, City, State",
+						email: "student.services@college.edu"
+					},
+					{
+						department: "Financial Aid",
+						phone: "+1 345 678 9012",
+						address: "123 College Ave, City, State",
+						email: "financial.aid@college.edu"
+					},
+					{
+						department: "Library",
+						phone: "+1 456 789 0123",
+						address: "123 College Ave, City, State",
+						email: "library@college.edu"
+					},
+					{
+						department: "IT Support",
+						phone: "+1 567 890 1234",
+						address: "123 College Ave, City, State",
+						email: "it.support@college.edu"
+					}
+				],
+				office: [
+					{
+						department: "President's Office",
+						phone: "+1 678 901 2345",
+						address: "123 College Ave, City, State",
+						email: "presidents.office@college.edu"
+					},
+					{
+						department: "Registrar's Office",
+						phone: "+1 789 012 3456",
+						address: "123 College Ave, City, State",
+						email: "registrar@college.edu"
+					},
+					{
+						department: "Human Resources",
+						phone: "+1 890 123 4567",
+						address: "123 College Ave, City, State",
+						email: "hr@college.edu"
+					},
+					{
+						department: "Facilities Management",
+						phone: "+1 901 234 5678",
+						address: "123 College Ave, City, State",
+						email: "facilities@college.edu"
+					},
+					{
+						department: "Security",
+						phone: "+1 012 345 6789",
+						address: "123 College Ave, City, State",
+						email: "security@college.edu"
+					}
+				],
+				schools: [
+					{
+						department: "School of Engineering",
+						phone: "+1 135 246 3579",
+						address: "456 College Blvd, City, State",
+						email: "engineering@college.edu"
+					},
+					{
+						department: "School of Business",
+						phone: "+1 246 357 4680",
+						address: "456 College Blvd, City, State",
+						email: "business@college.edu"
+					},
+					{
+						department: "School of Arts",
+						phone: "+1 357 468 5791",
+						address: "456 College Blvd, City, State",
+						email: "arts@college.edu"
+					},
+					{
+						department: "School of Science",
+						phone: "+1 468 579 6802",
+						address: "456 College Blvd, City, State",
+						email: "science@college.edu"
+					},
+					{
+						department: "School of Education",
+						phone: "+1 579 680 7913",
+						address: "456 College Blvd, City, State",
+						email: "education@college.edu"
+					}
+				]
+			};
+	
+			// Function to show content based on button click
+			function showContent(type) {
+				const container = document.getElementById('content-container');
+				container.innerHTML = ''; // Clear previous content
+	
+				const data = contactData[type];
+	
+				// Create blocks for each contact information
+				data.forEach(info => {
+					const block = document.createElement('div');
+					block.classList.add('contact-block');
+					block.innerHTML = `
+						<h3>${info.department}</h3>
+						<p>${info.phone}</p>
+						<p>${info.address}</p>
+						<p class="email">${info.email}</p>
+					`;
+					container.appendChild(block);
+				});
+			}
+			
+        </script>
+	</section>
+
+    <div class="none_div"></div>
+
+	
+   
+<script src="javascript/main_script.js"></script>
+    
+</body>
+
+<!-- <script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendmail(){
+		Email.send({}).then(
+	message => alert("Your Message Is Successful - Team GGU")
+);
+		}
+    </script>
+<script>
+    var navLinks= document.getElementById("navLinks");
+
+function showmenu(){
+    navLinks.style.right="0";
+}   
+function hidemenu(){
+    navLinks.style.right="-200px";
+}
+</script> -->
+</html>
