@@ -219,6 +219,94 @@
             return false;
         }
     </script>
+    <script>
+        function showmenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.style.right = "0";
+        }
+    
+        function hidemenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.style.right = "-200px";
+        }
+    
+        function showPopup() {
+            const popup = document.getElementById('confirmation-popup');
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 3000);
+        }
+    
+        function closePopup() {
+            const popup = document.getElementById('confirmation-popup');
+            popup.style.display = 'none';
+        }
+    
+        function handleSubmit(event) {
+            event.preventDefault();
+    
+            const fullname = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+    
+            if (!fullname || !email || !phone || !subject || !message) {
+                alert('⚠️ Please fill in all required fields!');
+                return false;
+            }
+    
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('⚠️ Please enter a valid email address!');
+                return false;
+            }
+    
+            const phoneRegex = /^[\d\+\-\s\(\)]{10,}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('⚠️ Please enter a valid phone number!');
+                return false;
+            }
+    
+            // Log data (for backend use later)
+            console.log({
+                fullname,
+                email,
+                phone,
+                subject,
+                message,
+                timestamp: new Date().toLocaleString()
+            });
+    
+            // CLEAN WhatsApp message (no emojis to avoid encoding issues)
+            const whatsappMessage =
+    `New Contact Form Submission
+    
+    Name: ${fullname}
+    Email: ${email}
+    Phone: ${phone}
+    Subject: ${subject}
+    
+    Message:
+    ${message}
+    
+    Submitted On: ${new Date().toLocaleString()}`;
+    
+            const whatsappURL = `https://wa.me/919493476813?text=${encodeURIComponent(whatsappMessage)}`;
+    
+            // Open WhatsApp instantly (faster UX)
+            const win = window.open(whatsappURL, '_blank');
+    
+            // Reset form + popup after slight delay
+            setTimeout(() => {
+                document.getElementById('contactForm').reset();
+                showPopup();
+            }, 300);
+    
+            return false;
+        }
+</script>
 
 </body>
 </html>
