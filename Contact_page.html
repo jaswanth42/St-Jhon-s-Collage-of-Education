@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - GGU</title>
-    <link rel="shortcut icon" href="image/Logo.png" type="image/svg+xml">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Contact St. John's College of Education for admissions, support, and general inquiries.">
+    <meta name="keywords" content="St. Johns College, Education, Contact, Admission">
+    <meta name="author" content="St. Johns College of Education">
+
+    <title>Contact Us - St. John's College of Education</title>
+    
+    <link rel="stylesheet" href="css/main_style.css">
     <link rel="stylesheet" href="css/contact_style.css">
+    <link rel="shortcut icon" href="image/Logo.png" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header Section with Navigation -->
     <section class="header">
         <nav>
-            <a href="index.html"><img src="image/logo.png" id="logo-img"></a>
-            
-            <div class="nav-links" id="navLinks">
+            <a href="index.html"><img src="image/Logo.png" id="logo-img"></a>
 
+            <div class="nav-links" id="navLinks">
                 <span class="icon" onclick="hidemenu()">&#10005;</span>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -30,279 +34,191 @@
             </div> 
             <span class="icon" onclick="showmenu()">&#9776;</span>
         </nav>
-        <!-- <div class="wrapper">
-		<div class="r_form_wrap">
-			
-			<div class="title">
-				<p>Contact form</p>
-			</div>
-			
-			<div class="r_form">
-				<form method="post" onsubmit="sendmail(); reset(); return false;">
-					<div class="input_wrap">
-						<label for="yourname">Your Name</label>
-						<div class="input_item">
-							<i class="fa fa-user" id="icon"></i>
-							<input type="text" name="your name" class="input" id="yourname" placeholder="Enter the name" required>
-						</div>
-					</div>
-					<div class="input_wrap">
-						<label for="emailaddress">Email Address</label>
-						<div class="input_item">
-							<i class="fa fa-envelope" id="icon"></i>
-							<input type="email" name="email address" class="input" id="emailaddress" placeholder="Enter the Email ID" required>
-						</div>
-					</div>
-
-					<div class="input_wrap">
-						<label for="phone">Phone</label>
-						<div class="input_item">
-							<i class="fa fa-commenting" id="icon"></i>
-                            <textarea name="phone" class="mess" id="phone" placeholder="Write your message..." size="500"></textarea>
-						</div>
-					</div>
-					
-	
-					<input type="submit" class="button" value="Send Message">
-					<div ></div>
-					<input type="reset" class="clear_ad" value="Clear">
-					
-				</form>
-			</div>
+       
+        <div class="text-box">
+            <h1>Contact Us</h1>
+            <p>We're here to help. Get in touch with St. John's College of Education for any queries or support you need.</p>
         </div>
-        </div> -->
-        <section class="hero-section">
-			<h1 class="hero-text">Contact Us</h1> <br>
-		</section>
-	
-		<section class="info-section">
-			<p class="college-info">Welcome to our college! We are dedicated to providing an exceptional education and fostering a strong community.</p>
-			<p class="thank-you-message">Thank you for reaching out to us. We are happy to assist you. Please find the relevant contact information below.</p>
-		</section>
-	
-		<!-- <div class="buttons-container">
-			<button onclick="showContent('general')" class="btn">General</button>
-			<button onclick="showContent('office')" class="btn">Office</button>
-			<button onclick="showContent('schools')" class="btn">Schools</button>
-		</div> -->
-	
-		<section id="content-container" class="contact-info"></section>
-	
-	   <!-- Get in Touch Section -->
-	<section class="get-in-touch">
-		<h2>Get in Touch</h2>
-		<div class="form-container">
-			<div class="form-group">
-				<label for="name">Name</label>
-				<input type="text" id="name" class="form-input" placeholder="Your Name">
-			</div>
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="email" id="email" class="form-input" placeholder="Your Email">
-			</div>
-		</div>
-	
-		<div class="form-container">
-			<div class="form-group">
-				<label for="phone">Phone Number</label>
-				<input type="tel" id="phone" class="form-input" placeholder="Your Phone Number">
-			</div>
-			<div class="form-group">
-				<label for="purpose">Purpose of Help</label>
-				<select id="purpose" class="form-select">
-					<option value="">Select an Option</option>
-					<option value="inquiry">General Inquiry</option>
-					<option value="support">Technical Support</option>
-					<option value="admissions">Admissions</option>
-					<option value="feedback">Feedback</option>
-				</select>
-			</div>
-		</div>
-	
-		<div class="form-group">
-			<label for="description">Description</label>
-			<textarea id="description" class="form-textarea" placeholder="Describe your issue or request"></textarea>
-		</div>
-	
-		<button class="form-submit">Submit</button>
-	</section>
-	
-	
-	
-		<!-- Popup element -->
-		<div class="popup" id="confirmation-popup">
-			<h2>🎉 Success! 🎉</h2>
-			<p>Your form has been submitted successfully. 😊</p>
-			<button class="close-btn" onclick="closePopup()">Close</button>
-		</div>
-	
-		<script>
-			// Function to show the popup
-			function showPopup() {
-				const popup = document.getElementById('confirmation-popup');
-				popup.style.display = 'block';
-			}
-	
-			// Function to close the popup
-			function closePopup() {
-				const popup = document.getElementById('confirmation-popup');
-				popup.style.display = 'none';
-			}
-	
-			// Adding event listener to the submit button
-			document.querySelector('.form-submit').addEventListener('click', function(event) {
-				event.preventDefault(); // Prevents the form from actually submitting for demonstration purposes
-				showPopup(); // Shows the popup when the submit button is clicked
-			});
-	
-			// Define the contact information for each section
-			const contactData = {
-				general: [
-					{
-						department: "Admissions",
-						phone: "+1 123 456 7890",
-						address: "123 College Ave, City, State",
-						email: "admissions@college.edu"
-					},
-					{
-						department: "Student Services",
-						phone: "+1 234 567 8901",
-						address: "123 College Ave, City, State",
-						email: "student.services@college.edu"
-					},
-					{
-						department: "Financial Aid",
-						phone: "+1 345 678 9012",
-						address: "123 College Ave, City, State",
-						email: "financial.aid@college.edu"
-					},
-					{
-						department: "Library",
-						phone: "+1 456 789 0123",
-						address: "123 College Ave, City, State",
-						email: "library@college.edu"
-					},
-					{
-						department: "IT Support",
-						phone: "+1 567 890 1234",
-						address: "123 College Ave, City, State",
-						email: "it.support@college.edu"
-					}
-				],
-				office: [
-					{
-						department: "President's Office",
-						phone: "+1 678 901 2345",
-						address: "123 College Ave, City, State",
-						email: "presidents.office@college.edu"
-					},
-					{
-						department: "Registrar's Office",
-						phone: "+1 789 012 3456",
-						address: "123 College Ave, City, State",
-						email: "registrar@college.edu"
-					},
-					{
-						department: "Human Resources",
-						phone: "+1 890 123 4567",
-						address: "123 College Ave, City, State",
-						email: "hr@college.edu"
-					},
-					{
-						department: "Facilities Management",
-						phone: "+1 901 234 5678",
-						address: "123 College Ave, City, State",
-						email: "facilities@college.edu"
-					},
-					{
-						department: "Security",
-						phone: "+1 012 345 6789",
-						address: "123 College Ave, City, State",
-						email: "security@college.edu"
-					}
-				],
-				schools: [
-					{
-						department: "School of Engineering",
-						phone: "+1 135 246 3579",
-						address: "456 College Blvd, City, State",
-						email: "engineering@college.edu"
-					},
-					{
-						department: "School of Business",
-						phone: "+1 246 357 4680",
-						address: "456 College Blvd, City, State",
-						email: "business@college.edu"
-					},
-					{
-						department: "School of Arts",
-						phone: "+1 357 468 5791",
-						address: "456 College Blvd, City, State",
-						email: "arts@college.edu"
-					},
-					{
-						department: "School of Science",
-						phone: "+1 468 579 6802",
-						address: "456 College Blvd, City, State",
-						email: "science@college.edu"
-					},
-					{
-						department: "School of Education",
-						phone: "+1 579 680 7913",
-						address: "456 College Blvd, City, State",
-						email: "education@college.edu"
-					}
-				]
-			};
-	
-			// Function to show content based on button click
-			function showContent(type) {
-				const container = document.getElementById('content-container');
-				container.innerHTML = ''; // Clear previous content
-	
-				const data = contactData[type];
-	
-				// Create blocks for each contact information
-				data.forEach(info => {
-					const block = document.createElement('div');
-					block.classList.add('contact-block');
-					block.innerHTML = `
-						<h3>${info.department}</h3>
-						<p>${info.phone}</p>
-						<p>${info.address}</p>
-						<p class="email">${info.email}</p>
-					`;
-					container.appendChild(block);
-				});
-			}
-			
-        </script>
-	</section>
+    </section>
 
-    <div class="none_div"></div>
+    <!-- Contact Information Section -->
+    <div class="container">
+        <h1>Get In Touch With St. John's College</h1>
+        <p style="text-align: center; margin-bottom: 40px; font-size: clamp(14px, 3vw, 16px); color: #555;">
+            Have questions about admissions, courses, or facilities? We'd love to hear from you. Reach out to us through any of the following departments.
+        </p>
 
-	
-   
-<script src="javascript/main_script.js"></script>
-    
-</body>
+        <!-- Contact Information Cards -->
+        <section class="contact-cards-wrapper">
+            <!-- Main Contact Card -->
+            <div class="contact-card">
+                <div class="card-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Main Campus</h3>
+                <p><strong>Address:</strong><br>St. John's College of Education<br>Bengaluru, Karnataka, India</p>
+            </div>
 
-<!-- <script src=" https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    function sendmail(){
-		Email.send({}).then(
-	message => alert("Your Message Is Successful - Team GGU")
-);
-		}
+            <!-- Phone Card -->
+            <div class="contact-card">
+                <div class="card-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Phone</h3>
+                <p><strong>General Inquiries:</strong><br>+91 XXXX XXX XXXX</p>
+                <p><strong>Admissions:</strong><br>+91 XXXX XXX XXXX</p>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card">
+                <div class="card-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p><strong>Admissions:</strong><br>admissions@sjce.edu.in</p>
+                <p><strong>General:</strong><br>info@sjce.edu.in</p>
+            </div>
+
+            <!-- Hours Card -->
+            <div class="contact-card">
+                <div class="card-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Office Hours</h3>
+                <p><strong>Monday - Friday:</strong><br>9:00 AM - 5:00 PM</p>
+                <p><strong>Saturday:</strong><br>10:00 AM - 2:00 PM</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Form Section -->
+    <br/><br/>
+    <div class="container">
+        <h2>Send Us a Message</h2>
+        <p style="margin-bottom: 30px; font-size: clamp(13px, 3vw, 15px); color: #666;">
+            Fill out the form below and we'll get back to you as soon as possible.
+        </p>
+
+        <section class="contact-form-wrapper">
+            <form id="contactForm" onsubmit="return handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullname"><i class="fas fa-user"></i> Full Name *</label>
+                        <input type="text" id="fullname" class="form-input" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone Number *</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="Enter your phone number" pattern="[0-9\+\-\s\(\)]{10,}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject"><i class="fas fa-tag"></i> Subject *</label>
+                        <select id="subject" class="form-select" required>
+                            <option value="">-- Select Subject --</option>
+                            <option value="admission">Admission Inquiry</option>
+                            <option value="course">Course Information</option>
+                            <option value="scholarship">Scholarship</option>
+                            <option value="facilities">Facilities & Campus</option>
+                            <option value="placement">Placement & Career</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message"><i class="fas fa-comments"></i> Message *</label>
+                    <textarea id="message" class="form-textarea" placeholder="Please describe your message or inquiry..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="popup" id="confirmation-popup">
+        <h2>Message Sent Successfully! ✓</h2>
+        <p>Thank you for reaching out to us. We'll get back to you soon.</p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Mobile Menu Toggle Scripts -->
+    <script>
+        function showmenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.style.right = "0";
+        }
+
+        function hidemenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.style.right = "-200px";
+        }
+
+        // Contact Form Handling
+        function showPopup() {
+            const popup = document.getElementById('confirmation-popup');
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 3000);
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('confirmation-popup');
+            popup.style.display = 'none';
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const fullname = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+            
+            if (!fullname || !email || !phone || !subject || !message) {
+                alert('⚠️ Please fill in all required fields!');
+                return false;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('⚠️ Please enter a valid email address!');
+                return false;
+            }
+            
+            const phoneRegex = /^[\d\+\-\s\(\)]{10,}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('⚠️ Please enter a valid phone number!');
+                return false;
+            }
+            
+            // Log form data for backend integration
+            console.log({
+                fullname: fullname,
+                email: email,
+                phone: phone,
+                subject: subject,
+                message: message,
+                timestamp: new Date().toLocaleString()
+            });
+            
+            document.getElementById('contactForm').reset();
+            showPopup();
+            
+            return false;
+        }
     </script>
-<script>
-    var navLinks= document.getElementById("navLinks");
 
-function showmenu(){
-    navLinks.style.right="0";
-}   
-function hidemenu(){
-    navLinks.style.right="-200px";
-}
-</script> -->
+</body>
 </html>
